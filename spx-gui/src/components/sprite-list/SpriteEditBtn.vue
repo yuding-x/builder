@@ -1,15 +1,15 @@
 <!--
  * @Author: Xu Ning
  * @Date: 2024-01-18 17:09:35
- * @LastEditors: xuning 453594138@qq.com
- * @LastEditTime: 2024-02-07 21:51:11
+ * @LastEditors: Hu JingJing
+ * @LastEditTime: 2024-02-06 17:45:04
  * @FilePath: /builder/spx-gui/src/components/sprite-list/SpriteEditBtn.vue
  * @Description: 
 -->
 <template>
   <n-flex justify="space-around">
     <div class="sprite-edit-btn">
-      <p>Sprite</p>
+      <p> {{ $t('stage.direction') }}</p>
       <n-input round autosize clearable :default-value="name"></n-input>
     </div>
     <div class="sprite-edit-btn">
@@ -44,7 +44,7 @@
       />
     </div>
     <div class="sprite-edit-btn">
-      <p>Show</p>
+      <p>{{ $t('stage.show') }}</p>
       <n-switch
         v-model:value="visible"
         @update:value="
@@ -55,7 +55,7 @@
       />
     </div>
     <div class="sprite-edit-btn">
-      <p>Size</p>
+      <p>{{ $t('stage.size') }}</p>
       <n-input-number
         type="number"
         :min="0"
@@ -70,7 +70,7 @@
     </div>
 
     <div class="sprite-edit-btn">
-      <p>Dir</p>
+      <p> {{ $t('stage.direction') }}</p>
       <n-input-number
         type="number"
         :min="-180"
