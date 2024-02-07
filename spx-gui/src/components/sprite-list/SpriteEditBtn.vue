@@ -1,8 +1,8 @@
 <!--
  * @Author: Xu Ning
  * @Date: 2024-01-18 17:09:35
- * @LastEditors: Hu JingJing
- * @LastEditTime: 2024-02-06 17:45:04
+ * @LastEditors: xuning 453594138@qq.com
+ * @LastEditTime: 2024-02-07 22:29:07
  * @FilePath: /builder/spx-gui/src/components/sprite-list/SpriteEditBtn.vue
  * @Description: 
 -->
@@ -123,10 +123,8 @@ const name = computed(() => (spriteStore.current ? spriteStore.current.config.na
     min-width: 70%;
   }
   .n-switch {
-    height: 100%;
-    margin: auto;
+    min-width:70%;
   }
-
   .n-input-number {
     max-width: 100px;
   }
