@@ -2,7 +2,7 @@
  * @Author: Xu Ning
  * @Date: 2024-01-18 17:09:35
  * @LastEditors: xuning 453594138@qq.com
- * @LastEditTime: 2024-02-07 14:06:12
+ * @LastEditTime: 2024-02-07 21:51:11
  * @FilePath: /builder/spx-gui/src/components/sprite-list/SpriteEditBtn.vue
  * @Description: 
 -->
@@ -45,7 +45,14 @@
     </div>
     <div class="sprite-edit-btn">
       <p>Show</p>
-      <n-switch v-model:value="isSpriteShow" />
+      <n-switch
+        v-model:value="visible"
+        @update:value="
+          (val) => {
+            spriteStore.current && spriteStore.current.setVisible(val)
+          }
+        "
+      />
     </div>
     <div class="sprite-edit-btn">
       <p>Size</p>
@@ -90,13 +97,12 @@ import { useSpriteStore } from '@/store/modules/sprite'
 const spriteStore = useSpriteStore()
 
 // ----------data related -----------------------------------
-// Ref about show sprite state
-const isSpriteShow = ref<boolean>(true)
 
 const x = computed(() => (spriteStore.current ? spriteStore.current.config.x : 0))
 const y = computed(() => (spriteStore.current ? spriteStore.current.config.y : 0))
 const heading = computed(() => (spriteStore.current ? spriteStore.current.config.heading : 0))
 const size = computed(() => (spriteStore.current ? spriteStore.current.config.size : 0))
+const visible = computed(() => (spriteStore.current ? spriteStore.current.config.visible : false))
 const name = computed(() => (spriteStore.current ? spriteStore.current.config.name : 0))
 </script>
 
@@ -106,7 +112,7 @@ const name = computed(() => (spriteStore.current ? spriteStore.current.config.na
   display: flex;
   margin: 2px;
   min-width: 100px;
-  p{
+  p {
     margin: 0;
     line-height: 2rem;
   }
@@ -114,12 +120,13 @@ const name = computed(() => (spriteStore.current ? spriteStore.current.config.na
   .n-input-number,
   .n-switch {
     margin-left: 3px;
-    min-width:70%;
+    min-width: 70%;
   }
-  .n-switch{
+  .n-switch {
     height: 100%;
     margin: auto;
   }
+
   .n-input-number {
     max-width: 100px;
   }
