@@ -4,7 +4,7 @@
 
 STEM EDU is a comprehensive online platform dedicated to enhancing children's programming education through interactive and engaging tools. The architecture encompasses a variety of modules, each designed to contribute to a holistic educational experience. These modules integrate to form a cohesive system that facilitates the creation, modification, and deployment of programming projects within an educational context.
 
-## **Module Boundaries TODO**
+## **Module Boundaries**
 
 1. **Asset List:**
 
