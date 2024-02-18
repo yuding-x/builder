@@ -2,7 +2,7 @@
  * @Author: Yao xinyue kother@qq.com
  * @Date: 2024-01-18 01:56:51
  * @LastEditors: xuning 453594138@qq.com
- * @LastEditTime: 2024-02-08 11:03:16
+ * @LastEditTime: 2024-02-18 11:00:13
  * @FilePath: /spx-gui/src/language/index.ts
  * @Description:
 */
