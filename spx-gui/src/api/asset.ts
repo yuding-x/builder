@@ -2,8 +2,8 @@
  * @Author: Yao xinyue
  * @Date: 2024-01-22 11:17:08
  * @LastEditors: xuning 453594138@qq.com
- * @LastEditTime: 2024-03-06 11:33:15
- * @FilePath: /builder/spx-gui/src/api/asset.ts
+ * @LastEditTime: 2024-03-06 15:25:45
+ * @FilePath: \spx-gui\src\api\asset.ts
  * @Description:
  */
 import { service } from '@/axios'
